@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+   
+   <head>
+      <title>AngularJS First Application</title>
+	  <script src="javascripts/angular.min.js"></script>
+	  <script src="javascripts/ang.js"></script>
+   </head>
+   
+   <body>
+      <h1>Sample Application</h1>
+      
+      <div ng-app = "myApp">
+		<div ng-controller="getCountriesController">
+			<p>Enter Substring of country <input type = "text" ng-model = "name"></p>
+			<p>Details of <span ng-bind = "name"></span>!</p>
+		  
+			<button ng-click="myFunction()" >Get Details</button>
+
+			<br><br/><br/>
+			
+				<table border="1">
+				<th>Country</th>
+				<th>Capital</th>
+				<th>Position</th>
+				<tr ng-repeat="x in CountryDatajson">
+				<td>{{x.name}}</td>
+				<td>{{x.capital}}</td>
+				<td>{{x.latlng}}</td></tr>
+				</table>
+		
+			
+	  </div>
+	  </div>
+	  
+	  
+      
+     
+      
+   </body>
+</html>
